@@ -47,3 +47,8 @@ Outputs:
   BWAPIFunctionRoleArn:
     Description: "ARN of the implicit IAM role created for the bw-api Lambda function"
     Value: !GetAtt BWAPIFunctionRole.Arn
+  AssetRetrievalApiId:
+    Description: ID of Asset Retrieval API Gateway
+    Value: !Ref ServerlessRestApi
+    Export:
+      Name: AssetRetrievalApiId
